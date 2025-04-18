@@ -1,0 +1,237 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff7f0;
+    color: #5c3d2e;
+    line-height: 1.6;
+  }
+  
+  /* Cabeçalho */
+  header {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff0f5;
+    overflow: hidden; /* ESSENCIAL para cortar o ::before no limite do header NÃO REMOVE ESSA PESTE */
+   
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* atalho para top: 0; left: 0; right: 0; bottom: 0; */
+    background-image: url('imgs/frenteladoceria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+    pointer-events: none; /* evita que a imagem bloqueie cliques nos links */
+  }
+  
+  header * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #d26070;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Navegação */
+  nav {
+    background-color: #f8c8dc;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  
+  nav a {
+    color: #5c3d2e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #d26070;
+  }
+  
+  /* Carrossel */
+  .carrossel {
+    position: relative;
+    max-width: 1000px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .slide {
+    display: none;
+    text-align: center;
+    position: relative;
+  }
+  
+  .slide.ativo {
+    display: block;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem 1rem 0 0;
+  }
+  
+  .descricao {
+    background-color: #fff0f5;
+    padding: 1rem;
+  }
+  
+  .descricao h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .descricao.direita {
+    text-align: right;
+  }
+  
+  .descricao.esquerda {
+    text-align: left;
+  }
+  
+  .anterior,
+  .proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffffcc;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .anterior:hover,
+  .proximo:hover {
+    background-color: #ffd6d6;
+  }
+  
+  .anterior {
+    left: 10px;
+  }
+  
+  .proximo {
+    right: 10px;
+  }
+  
+  /* Seções gerais */
+  section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #d26070;
+    text-align: center;
+  }
+  
+  /* Cardápio */
+  .produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+  
+  .produto {
+    background-color: #fff;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .produto img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Formulário */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: auto;
+    background-color: #fffafa;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  form input,
+  form select,
+  form textarea,
+  form button {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #f8c8dc;
+    color: #5c3d2e;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #eaaec5;
+  }
+  
+  /* Contato */
+  #contato p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  #contato a {
+    color: #d26070;
+    text-decoration: none;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #ffe4e1;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #5c3d2e;
+  }
+  
