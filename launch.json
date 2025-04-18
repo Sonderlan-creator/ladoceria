@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "type": "edge",
             "request": "launch",
             "name": "Open index.html",
             "file": "c:\\Users\\araga\\Documents\\Site Final\\index.html"

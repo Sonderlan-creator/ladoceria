@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="5" />
   <title>LA DOCERIA</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -11,17 +12,47 @@
 
 <body>
   <header>
-    <h1>LA DOCERIA</h1>
-    <p>Doces feitos com amor ♥</p>
-    
-  </header>
+    <nav class="nav-bar">
+      <a href = "#" class="nav-logo">
+        <h2 class="logo-text">☕ La doceria</h2>
+      </a>
+      <ul class="nav-menu">
 
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#cardapio">Cardápio</a>
-    <a href="#pedido">Pedido</a>
-    <a href="#contato">Contato</a>
-  </nav>
+       <li class="nav-item">
+      <a href="#sobre" class="nav-link">Sobre</a>
+      </li>
+      <li class="nav-item">
+      <a href="#cardapio" class="nav-link">Cardápio</a>
+      </li>
+      <li class="nav-item">
+      <a href="#pedido" class="nav-link">Pedido</a>
+      </li>
+      <li class="nav-item">
+      <a href="#contato" class="nav-link">Contato</a>
+      </li>
+    </ul>
+    </nav>
+  </header>
+<main>
+    <section class="hero-section">
+      <div class="section-content">
+        <div class="hero-details">
+        <h2 class="title">Bem-vindo à La Doceria!</h2>
+        <h3 class="subtitle">Doces feitos com amor e carinho.</h3>
+        <p class="description"> Bem-vindo a La Doceria, onde cada sabor te conta uma história.</p>
+
+        <div class="buttons"> 
+          <a href="#cardapio" class="button order-now">Ver Cardápio</a>
+          <a href="#pedido" class="button complete-order">Fazer Pedido</a>
+
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="imgs/1cd018fa1a2bf87c9918343cd14aea30 copy.png" alt="Bolo de morango capa" class="hero-image" />
+      </div>
+    </section>
+</main>
+ 
 
   <section id="carousel">
     <div class="carrossel">
@@ -112,7 +143,7 @@
       const qtd = document.getElementById('quantidade').value;
       const obs = document.getElementById('obs').value;
       const msg = `Olá! Gostaria de fazer um pedido:\n- ${produto} x${qtd}\nObservações: ${obs}\nNome: ${nome}`;
-      const zap = `https://wa.me/5599999999999?text=${encodeURIComponent(msg)}`;
+      const zap = `https://wa.me/5575988117699?text=${encodeURIComponent(msg)}`;
       window.open(zap, '_blank');
     });
 
