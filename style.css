@@ -1,13 +1,15 @@
 :root{
+
     --font-size-s: 0.9rem;
     --font-size-m: 1rem;
     --font-size-l: 1.12rem;
     --font-size-xl: 1.5rem;
     --font-size-xxl: 2rem;
     --font-size-xxxl: 2.3rem;
+    
     --color-primary: #5c3d2e;
-    --color-secondary: #d26070;
-    --color-tertiary: #f8c8dc;
+    --color-secondary: #402020;
+    --color-tertiary: #FCE4D8;
     --color-quaternary: #fff0f5;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -21,7 +23,7 @@
 
     --site-max-width: 1300px;
   }
-
+  
 
 /* Reset básico */
 * {
@@ -32,8 +34,8 @@
   
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fff7f0;
-    color: #5c3d2e;
+    background-color: #FCE4D8;
+    color: var(--color-primary);
     line-height: 1.6;
   }
   ul {
@@ -82,7 +84,7 @@
     z-index: 5;
   }
   header h1 {
-    font-family: 'Pacifico', cursive;
+    font-family: "MonteCarlo", cursive;
     font-size: 3rem;
     color: #d26070;
   }
@@ -94,7 +96,7 @@
   
   /* Navegação */
   header .nav-bar {
-    background-color: #f8c8dc;
+    background-color:var(--color-tertiary);
     display: flex;
     padding: 20px ;
     justify-content: space-between;
@@ -103,7 +105,7 @@
   }
   .nav-bar .nav-menu .nav-link{
     padding: 10px 18px;
-    color: #5c3d2e;
+    color: var(--color-primary);
     font-size: var(--font-size-m);
     border-radius: 15px;
     transition: 0.3s ease;
@@ -112,19 +114,23 @@
   
   {
     color: white;
-    background-color:  #5c3d2e;
+    background-color:  var(--color-primary);
   }
   .nav-bar .nav-logo .logo-text{
-    font-family: 'Pacifico', cursive;
-    font-size: 2rem;
-    color: #d26070;
+    font-family: 'MonteCarlo', cursive;
+    font-size: 4rem;
+    
+    color: var(--color-primary);
+    margin-left: 25px;
+
+    
   }
   .nav-bar .nav-menu{
     display: flex;
     gap: 20px;
   }
   .nav-bar .nav-item {
-    color: #5c3d2e;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
@@ -149,18 +155,20 @@
     font-size: 4rem;
     color: #d26070;
     margin-bottom: 1rem;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Dancing Script', cursive;
+    justify-content: left;
+    
   }
   .hero-section .hero-details .subtitle {
     font-size: 2rem;
-    color: #5c3d2e;
+    color: var(--color-primary);
     margin-top: 8px;
     max-width: 70%;
   
   }
   .hero-section .hero-details .description {
     font-size: 1.2rem;
-    color: #5c3d2e;
+    color: var(--color-primary);
     margin: 24px 0 40px;
     max-width: 70%;
   }
@@ -171,22 +179,22 @@
   .hero-section .hero-details .button{
     padding: 10px 26px;
     border: 2px solid transparent;
-    color:#5c3d2e;
+    color: var( --color-primary);
     border-radius: 15px;
-    background-color: #f8c8dc;
+    background-color:var(--color-tertiary);
     font-weight: medium;
     transition: 0.3s ease;
   }
   .hero-section .hero-details .button:hover,
   .hero-section .hero-details .complete-order{
-    background: #5c3d2e;
+    background: var(--color-primary);
     color: white;
     border-color: white;
    
   }
   .hero-section .hero-details .complete-order:hover{
-    background: #f8c8dc;
-    color: #5c3d2e;
+    background:var(--color-tertiary);
+    color: var(--color-primary);
     border-color: transparent;
   }
   .hero-section .hero-image-wrapper{
@@ -215,14 +223,14 @@
     flex-direction: column;
     align-items: center;
     padding-top: 100px ;
-    background: #f8c8dc;
+    background: var(--color-quaternary);
     
   }
   .nav-bar .nav-menu .nav-link
   {
     display: block;
     padding: 10px 18px;
-    color: #5c3d2e;
+    color: var(--color-primary);
     font-size: var(--font-size-m);
     border-radius: 15px;
     transition: 0.3s ease;
@@ -344,10 +352,10 @@
     gap: 1rem;
     max-width: 500px;
     margin: auto;
-    background-color: #fffafa;
+    background-color:var(--color-tertiary);
     padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: var(--border-radius-m);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
   
   form input,
@@ -356,21 +364,21 @@
   form button {
     padding: 0.8rem;
     border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    font-size: 1rem;
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-m);
   }
   
   form button {
-    background-color: #f8c8dc;
-    color: #5c3d2e;
-    font-weight: bold;
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   form button:hover {
-    background-color: #eaaec5;
+    background-color: #eaaec5; /* Não há uma variável correspondente, mantive o valor fixo */
   }
   
   /* Contato */
@@ -390,6 +398,5 @@
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
-    color: #5c3d2e;
+    color: var(--color-primary);
   }
-  
