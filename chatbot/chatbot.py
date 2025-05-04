@@ -5,12 +5,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 
+nltk.download('punkt')
+nltk.download('stopwords')
+
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
-
-nltk.download('punkt')
-nltk.download('stopwords')
 
 stop_words = set(stopwords.words("portuguese")) 
 stemmer = PorterStemmer()
