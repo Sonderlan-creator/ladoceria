@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('punkt_tab')
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
