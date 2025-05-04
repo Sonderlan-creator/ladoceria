@@ -1,7 +1,25 @@
 {
+  "Olá": "Olá! Como posso ajudar você hoje?",
+  "Oi": "Oi! Como posso ajudar você hoje?",
+  "Oi, tudo bem?": "Oi! Tudo ótimo, como posso ajudar?",
+  "Oi, tudo bom?": "Oi! Tudo ótimo, como posso ajudar?",
+  "Olá, tudo bem?": "Olá! Tudo ótimo, como posso ajudar?",
+  "oi": "Oi! Como posso ajudar você hoje?",
+  "oi, tudo bem?": "Oi! Tudo ótimo, como posso ajudar?",
+  "oii": "Oi! Como posso ajudar você hoje?",
+  "ola": "Olá! Como posso ajudar você hoje?",
+
+  "bom dia": "Bom dia! Como posso ajudar você hoje?",
+  "boa tarde": "Boa tarde! Como posso ajudar você hoje?",
+  "boa noite": "Boa noite! Como posso ajudar você hoje?",
+
   "horário de funcionamento": "Nosso horário de funcionamento é das 9h às 18h, de segunda a sábado.",
   "qual é o horário de funcionamento?": "Atendemos das 9h às 18h, de segunda a sábado.",
+  "que horas vocês abrem?": "Abrimos às 9h, de segunda a sábado.",
   "a loja está aberta agora?": "Nosso horário de funcionamento é das 9h às 18h, de segunda a sábado.",
+  "que horas abre?": "Abrimos às 9h, de segunda a sábado.",
+  "qual horario vocês abrem?": "Abrimos às 9h, de segunda a sábado.",
+
   
   "formas de pagamento": "Aceitamos cartões de crédito, débito, Pix e dinheiro.",
   "como posso pagar?": "Aceitamos cartões de crédito, débito, Pix e dinheiro.",
@@ -9,9 +27,9 @@
   "métodos de pagamento": "Aceitamos cartões de crédito, débito, Pix e dinheiro.",
   "aceitam pagamento via Pix?": "Sim! Aceitamos Pix como forma de pagamento.",
   
-  "cardápio": "Temos bolos, tortas, doces e cafés! Qual item do cardápio você gostaria de saber mais?",
-  "o que vocês vendem?": "Nossa doceria tem bolos, tortas, doces e cafés! Quer saber mais detalhes?",
-  "menu": "Temos um cardápio delicioso! Bolos, tortas, doces e cafés. Qual deles te interessa?",
+  "cardápio": "Temos bolos, tortas, salgados, doces e cafés! Qual item do cardápio você gostaria de saber mais?",
+  "o que vocês vendem?": "Nossa doceria tem bolos, tortas, salgados, doces e cafés! Quer saber mais detalhes?",
+  "menu": "Temos um cardápio delicioso! Bolos, tortas, salgados, doces e cafés. Qual deles te interessa?",
   
   "encomendas": "Sim! Aceitamos encomendas para festas e eventos. Entre em contato para mais detalhes.",
   "vocês fazem encomendas?": "Sim! Aceitamos encomendas para festas e eventos. Entre em contato para mais informações.",
