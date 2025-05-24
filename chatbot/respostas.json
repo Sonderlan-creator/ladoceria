@@ -1,117 +1,176 @@
 {
-  "Olá": "Olá! Como posso ajudar você hoje?",
-  "Oi": "Oi! Como posso ajudar você hoje?",
-  "Oi, tudo bem?": "Oi! Tudo ótimo, como posso ajudar?",
-  "Oi, tudo bom?": "Oi! Tudo ótimo, como posso ajudar?",
-  "Olá, tudo bem?": "Olá! Tudo ótimo, como posso ajudar?",
-  "oi": "Oi! Como posso ajudar você hoje?",
-  "oi, tudo bem?": "Oi! Tudo ótimo, como posso ajudar?",
-  "oii": "Oi! Como posso ajudar você hoje?",
-  "ola": "Olá! Como posso ajudar você hoje?",
-
-  "bom dia": "Bom dia! Como posso ajudar você hoje?",
-  "boa tarde": "Boa tarde! Como posso ajudar você hoje?",
-  "boa noite": "Boa noite! Como posso ajudar você hoje?",
-
-  "horário de funcionamento": "Nosso horário de funcionamento é das 9h às 18h, de segunda a sábado.",
-  "qual é o horário de funcionamento?": "Atendemos das 9h às 18h, de segunda a sábado.",
-  "que horas vocês abrem?": "Abrimos às 9h, de segunda a sábado.",
-  "a loja está aberta agora?": "Nosso horário de funcionamento é das 9h às 18h, de segunda a sábado.",
-  "que horas abre?": "Abrimos às 9h, de segunda a sábado.",
-  "qual horario vocês abrem?": "Abrimos às 9h, de segunda a sábado.",
-
-  
-  "formas de pagamento": "Aceitamos cartões de crédito, débito, Pix e dinheiro.",
-  "como posso pagar?": "Aceitamos cartões de crédito, débito, Pix e dinheiro.",
-  "vocês aceitam cartão?": "Sim! Aceitamos cartões de crédito e débito.",
-  "métodos de pagamento": "Aceitamos cartões de crédito, débito, Pix e dinheiro.",
-  "aceitam pagamento via Pix?": "Sim! Aceitamos Pix como forma de pagamento.",
-  
-  "cardápio": "Temos bolos, tortas, salgados, doces e cafés! Qual item do cardápio você gostaria de saber mais?",
-  "o que vocês vendem?": "Nossa doceria tem bolos, tortas, salgados, doces e cafés! Quer saber mais detalhes?",
-  "menu": "Temos um cardápio delicioso! Bolos, tortas, salgados, doces e cafés. Qual deles te interessa?",
-  
-  "encomendas": "Sim! Aceitamos encomendas para festas e eventos. Entre em contato para mais detalhes.",
-  "vocês fazem encomendas?": "Sim! Aceitamos encomendas para festas e eventos. Entre em contato para mais informações.",
-  "como faço um pedido personalizado?": "Para pedidos personalizados, entre em contato conosco pelo Instagram @lla.doceriaa.",
-  "posso encomendar um bolo para amanhã?": "Sim! Aceitamos encomendas antecipadas. Entre em contato pelo Instagram @lla.doceriaa.",
-  
-  "localização": "Estamos na Rua Principal, Capoeiruçu, Cachoeira, Bahia, Brazil, 44300000.",
-  "onde fica a doceria?": "Nosso endereço é Rua Principal, Capoeiruçu, Cachoeira, Bahia, Brazil, 44300000.",
-  "como chegar até vocês?": "Estamos localizados na Rua Principal, Capoeiruçu, Cachoeira, Bahia. Precisa de mais detalhes?",
-  
-  "redes sociais": "Nos siga no Instagram: @lla.doceriaa para novidades e promoções!",
-  "vocês têm Instagram?": "Sim! Nos siga em @lla.doceriaa no Instagram para novidades e promoções.",
-  "qual é o Instagram da doceria?": "Nosso Instagram é @lla.doceriaa. Siga-nos para acompanhar novidades!",
-  
-  "pedido": "Para fazer um pedido, entre em contato pelo Instagram ou visite nossa loja!",
-  "como faço um pedido?": "Você pode fazer um pedido diretamente em nossa loja ou pelo Instagram @lla.doceriaa.",
-  "quero comprar algo": "Ótimo! Você pode visitar nossa loja ou nos contatar pelo Instagram @lla.doceriaa.",
-  
-  "promoções": "Sempre temos promoções especiais! Acompanhe nosso Instagram @lla.doceriaa para ofertas exclusivas.",
-  "vocês têm promoções?": "Sim! Temos promoções recorrentes. Fique de olho no nosso Instagram @lla.doceriaa!",
-  "tem desconto?": "Dependendo da compra, oferecemos descontos especiais. Pergunte na loja para mais detalhes!",
-  
-  "ingredientes": "Usamos ingredientes frescos e de qualidade em nossos produtos.",
-  "vocês usam ingredientes naturais?": "Sim! Todos os nossos produtos são feitos com ingredientes naturais e selecionados.",
-  "seus bolos são artesanais?": "Sim! Nossos bolos são feitos de maneira artesanal para garantir sabor e qualidade.",
-  
-  "alergias alimentares": "Se você tem alguma restrição alimentar, nos informe e tentaremos ajudar!",
-  "tem opções sem lactose?": "Sim! Temos algumas opções sem lactose. Pergunte na loja para mais detalhes.",
-  "vocês vendem produtos sem glúten?": "Temos algumas opções sem glúten! Consulte nosso cardápio para mais informações.",
-  
-  "suporte ao cliente": "Caso precise de ajuda ou tenha dúvidas, entre em contato conosco pelo Instagram @lla.doceriaa.",
-  "como falo com o suporte?": "Você pode entrar em contato conosco pelo Instagram @lla.doceriaa ou diretamente em nossa loja.",
-  "quem posso procurar para resolver um problema?": "Nossa equipe está sempre disponível para ajudar! Fale conosco pelo Instagram ou pessoalmente na loja.",
-  
-  "avaliações": "Nosso objetivo é oferecer produtos deliciosos e atendimento excelente! Sua opinião é importante para nós.",
-  "posso deixar uma avaliação?": "Sim! Você pode deixar sua avaliação no Instagram ou nos contar pessoalmente.",
-  "os clientes gostam dos produtos?": "Sim! Recebemos ótimos feedbacks dos nossos clientes sobre os produtos e serviços." ,
-
-  "atendimento ao cliente": "Nosso atendimento é amigável e está sempre à disposição para garantir a melhor experiência.",
-  "como posso entrar em contato?": "Você pode entrar em contato com a gente pelo Instagram @lla.doceriaa ou pelo telefone (xx) xxxx-xxxx.",
-  
-  "horário de pico": "Nosso horário de pico é geralmente das 12h às 14h, então, se puder, venha fora desse horário para evitar a fila.",
-  "quais são os horários mais movimentados?": "Os horários mais movimentados costumam ser das 12h às 14h. Se puder, venha em outro horário para mais tranquilidade.",
-  
-  "delivery": "Atualmente, não realizamos entregas, mas você pode fazer o pedido para retirar diretamente na loja.",
-  "vocês fazem entrega?": "No momento, não fazemos entrega. Mas, você pode retirar seu pedido diretamente na loja.",
-  
-  "horário de feriado": "Em feriados, nosso horário de funcionamento pode ser alterado. Fique de olho nas nossas redes sociais para atualizações.",
-  "qual o horário de funcionamento no feriado?": "Nosso horário pode ser diferente nos feriados. Confira as atualizações em nossas redes sociais!",
-  
-  "celebrações e eventos": "Além de bolos e doces, também temos opções para eventos e celebrações, como mini tortas e doces em embalagens especiais.",
-  "vocês fazem doces para casamento?": "Sim, fazemos doces personalizados para casamentos e eventos especiais. Entre em contato pelo Instagram para mais detalhes.",
-  
-  "novidades no cardápio": "Sempre estamos inovando! Fique de olho em nosso Instagram para saber das novidades no cardápio.",
-  "tem algo novo no cardápio?": "Sim! Estamos sempre trazendo novidades. Acompanhe nosso Instagram @lla.doceriaa para ver as últimas adições.",
-  
-  "promoções para aniversariantes": "Aniversariantes do mês têm descontos especiais! Basta mostrar sua data de nascimento na loja.",
-  "tem promoção para aniversariante?": "Sim! Aniversariantes do mês recebem descontos especiais. Passe na loja para aproveitar!",
-  
-  "embalagem para presente": "Temos embalagens especiais para presentes! Se precisar, é só pedir na hora da compra.",
-  "vocês têm embalagens para presente?": "Sim, temos embalagens lindas para presentear! Pergunte na loja e teremos o prazer de preparar para você.",
-  
-  "produtos veganos": "Temos algumas opções veganas no cardápio! Pergunte na loja sobre as opções disponíveis.",
-  "vocês têm bolos veganos?": "Sim! Temos bolos e doces veganos. Pergunte na loja para mais detalhes sobre os itens disponíveis.",
-  
-  "refeições": "Atualmente, não servimos refeições, apenas sobremesas e lanches como bolos e cafés.",
-  "vocês servem almoço?": "Não servimos almoço, mas temos um cardápio delicioso de bolos, tortas, doces e cafés!",
-  
-  "tamanho dos bolos": "Os bolos podem ser feitos em tamanhos pequenos, médios e grandes, dependendo da sua necessidade.",
-  "qual o tamanho dos bolos?": "Os bolos podem ser feitos em tamanhos variados, desde pequenos até grandes. Consulte-nos para mais informações.",
-  
-  "cancelamento de encomenda": "Caso precise cancelar uma encomenda, avise com antecedência para que possamos ajustar nossa produção.",
-  "posso cancelar minha encomenda?": "Sim! Caso precise cancelar uma encomenda, entre em contato o quanto antes para que possamos ajustar nossa agenda.",
-  
-  "tempo de espera": "O tempo de espera pode variar dependendo do pedido, mas sempre avisamos o tempo estimado na hora do pedido.",
-  "quanto tempo demora para o pedido ficar pronto?": "O tempo de preparo varia conforme o pedido. Podemos te informar o tempo exato quando você realizar a encomenda.",
-  "sugestões de sabores": "Estamos sempre abertos a sugestões! Se tiver alguma ideia de sabor, entre em contato conosco.",
-  "quais são os sabores disponíveis?": "Temos uma variedade de sabores! Pergunte na loja ou confira nosso cardápio online.",
-  
-  "horário de fechamento": "Fechamos às 18h, mas estamos sempre prontos para atender até o último cliente!",
-  "que horas vocês fecham?": "Nosso horário de fechamento é às 18h. Venha nos visitar antes disso!",
-  
-  "atendimento personalizado": "Estamos sempre prontos para oferecer um atendimento personalizado e ajudar no que for necessário.",
-  "vocês oferecem atendimento personalizado?": "Sim! Estamos aqui para oferecer um atendimento personalizado e ajudar no que você precisar."
+  "cumprimento": {
+    "perguntas": [
+      "Olá", "Oi", "Oi, tudo bem?", "Oi, tudo bom?", "Olá, tudo bem?", "oi", "oi, tudo bem?", "oii", "ola"
+    ],
+    "resposta": "Olá! Como posso ajudar você hoje?"
+  },
+  "horario_funcionamento": {
+    "perguntas": [
+      "horário de funcionamento", "qual é o horário de funcionamento?", "que horas vocês abrem?", "a loja está aberta agora?", "que horas abre?", "qual horario vocês abrem?"
+    ],
+    "resposta": "Nosso horário de funcionamento é das 9h às 18h, de segunda a sábado."
+  },
+  "formas_pagamento": {
+    "perguntas": [
+      "formas de pagamento", "como posso pagar?", "vocês aceitam cartão?", "métodos de pagamento", "aceitam pagamento via Pix?"
+    ],
+    "resposta": "Aceitamos cartões de crédito, débito, Pix e dinheiro."
+  },
+  "cardapio": {
+    "perguntas": [
+      "cardápio", "o que vocês vendem?", "menu"
+    ],
+    "resposta": "Temos bolos, tortas, salgados, doces e cafés! Qual item do cardápio você gostaria de saber mais?"
+  },
+  "encomendas": {
+    "perguntas": [
+      "encomendas", "vocês fazem encomendas?", "como faço um pedido personalizado?", "posso encomendar um bolo para amanhã?"
+    ],
+    "resposta": "Sim! Aceitamos encomendas para festas e eventos. Entre em contato para mais detalhes."
+  },
+  "localizacao": {
+    "perguntas": [
+      "localização", "onde fica a doceria?", "como chegar até vocês?"
+    ],
+    "resposta": "Estamos na Rua Principal, Capoeiruçu, Cachoeira, Bahia, Brazil, 44300000."
+  },
+  "redes_sociais": {
+    "perguntas": [
+      "redes sociais", "vocês têm Instagram?", "qual é o Instagram da doceria?"
+    ],
+    "resposta": "Nos siga no Instagram: @lla.doceriaa para novidades e promoções!"
+  },
+  "pedido": {
+    "perguntas": [
+      "pedido", "como faço um pedido?", "quero comprar algo"
+    ],
+    "resposta": "Para fazer um pedido, entre em contato pelo Instagram ou visite nossa loja!"
+  },
+  "promocoes": {
+    "perguntas": [
+      "promoções", "vocês têm promoções?", "tem desconto?"
+    ],
+    "resposta": "Sempre temos promoções especiais! Acompanhe nosso Instagram @lla.doceriaa para ofertas exclusivas."
+  },
+  "ingredientes": {
+    "perguntas": [
+      "ingredientes", "vocês usam ingredientes naturais?", "seus bolos são artesanais?"
+    ],
+    "resposta": "Usamos ingredientes frescos e de qualidade em nossos produtos."
+  },
+  "alergias_alimentares": {
+    "perguntas": [
+      "alergias alimentares", "tem opções sem lactose?", "vocês vendem produtos sem glúten?"
+    ],
+    "resposta": "Se você tem alguma restrição alimentar, nos informe e tentaremos ajudar!"
+  },
+  "suporte_cliente": {
+    "perguntas": [
+      "suporte ao cliente", "como falo com o suporte?", "quem posso procurar para resolver um problema?"
+    ],
+    "resposta": "Caso precise de ajuda ou tenha dúvidas, entre em contato conosco pelo Instagram @lla.doceriaa."
+  },
+  "avaliacoes": {
+    "perguntas": [
+      "avaliações", "posso deixar uma avaliação?", "os clientes gostam dos produtos?"
+    ],
+    "resposta": "Nosso objetivo é oferecer produtos deliciosos e atendimento excelente! Sua opinião é importante para nós."
+  },
+  "atendimento_cliente": {
+    "perguntas": [
+      "atendimento ao cliente", "como posso entrar em contato?"
+    ],
+    "resposta": "Nosso atendimento é amigável e está sempre à disposição para garantir a melhor experiência."
+  },
+  "horario_pico": {
+    "perguntas": [
+      "horário de pico", "quais são os horários mais movimentados?"
+    ],
+    "resposta": "Nosso horário de pico é geralmente das 12h às 14h, então, se puder, venha fora desse horário para evitar a fila."
+  },
+  "delivery": {
+    "perguntas": [
+      "delivery", "vocês fazem entrega?"
+    ],
+    "resposta": "Atualmente, não realizamos entregas, mas você pode fazer o pedido para retirar diretamente na loja."
+  },
+  "horario_feriado": {
+    "perguntas": [
+      "horário de feriado", "qual o horário de funcionamento no feriado?"
+    ],
+    "resposta": "Em feriados, nosso horário de funcionamento pode ser alterado. Fique de olho nas nossas redes sociais para atualizações."
+  },
+  "celebracoes_eventos": {
+    "perguntas": [
+      "celebrações e eventos", "vocês fazem doces para casamento?"
+    ],
+    "resposta": "Além de bolos e doces, também temos opções para eventos e celebrações, como mini tortas e doces em embalagens especiais."
+  },
+  "novidades_cardapio": {
+    "perguntas": [
+      "novidades no cardápio", "tem algo novo no cardápio?"
+    ],
+    "resposta": "Sempre estamos inovando! Fique de olho em nosso Instagram para saber das novidades no cardápio."
+  },
+  "promocoes_aniversariantes": {
+    "perguntas": [
+      "promoções para aniversariantes", "tem promoção para aniversariante?"
+    ],
+    "resposta": "Aniversariantes do mês têm descontos especiais! Basta mostrar sua data de nascimento na loja."
+  },
+  "embalagem_presente": {
+    "perguntas": [
+      "embalagem para presente", "vocês têm embalagens para presente?"
+    ],
+    "resposta": "Temos embalagens especiais para presentes! Se precisar, é só pedir na hora da compra."
+  },
+  "produtos_veganos": {
+    "perguntas": [
+      "produtos veganos", "vocês têm bolos veganos?"
+    ],
+    "resposta": "Temos algumas opções veganas no cardápio! Pergunte na loja sobre as opções disponíveis."
+  },
+  "refeicoes": {
+    "perguntas": [
+      "refeições", "vocês servem almoço?"
+    ],
+    "resposta": "Atualmente, não servimos refeições, apenas sobremesas e lanches como bolos e cafés."
+  },
+  "tamanho_bolos": {
+    "perguntas": [
+      "tamanho dos bolos", "qual o tamanho dos bolos?"
+    ],
+    "resposta": "Os bolos podem ser feitos em tamanhos pequenos, médios e grandes, dependendo da sua necessidade."
+  },
+  "cancelamento_encomenda": {
+    "perguntas": [
+      "cancelamento de encomenda", "posso cancelar minha encomenda?"
+    ],
+    "resposta": "Caso precise cancelar uma encomenda, avise com antecedência para que possamos ajustar nossa produção."
+  },
+  "tempo_espera": {
+    "perguntas": [
+      "tempo de espera", "quanto tempo demora para o pedido ficar pronto?"
+    ],
+    "resposta": "O tempo de espera pode variar dependendo do pedido, mas sempre avisamos o tempo estimado na hora do pedido."
+  },
+  "sugestoes_sabores": {
+    "perguntas": [
+      "sugestões de sabores", "quais são os sabores disponíveis?"
+    ],
+    "resposta": "Estamos sempre abertos a sugestões! Se tiver alguma ideia de sabor, entre em contato conosco."
+  },
+  "horario_fechamento": {
+    "perguntas": [
+      "horário de fechamento", "que horas vocês fecham?"
+    ],
+    "resposta": "Fechamos às 18h, mas estamos sempre prontos para atender até o último cliente!"
+  },
+  "atendimento_personalizado": {
+    "perguntas": [
+      "atendimento personalizado", "vocês oferecem atendimento personalizado?"
+    ],
+    "resposta": "Estamos sempre prontos para oferecer um atendimento personalizado e ajudar no que for necessário."
+  }
 }
