@@ -60,10 +60,11 @@ modo_atendente = False
 mensagens.clear()
 modo_atendente = False
 
+# Simulação de pedidos
 pedidos = {
-    "1001": "Pedido 1001: Entregue ✅",
-    "1002": "Pedido 1002: Em trânsito 🚚",
-    "1003": "Pedido 1003: Aguardando pagamento 💳"
+    "1": "Pedido 1: Entregue ✅",
+    "2": "Pedido 2: Em trânsito 🚚",
+    "3": "Pedido 3: Aguardando pagamento 💳"
 }
 
 @app.route('/')
@@ -119,7 +120,7 @@ def buscar_resposta(mensagem):
         return pedidos[msg]
 
     if msg == "1" or "verificar pedido" in msg:
-        return "Por favor, digite o número do seu pedido (ex: 1001, 1002 ou 1003)."
+        return "Por favor, digite o número do seu pedido (ex: 1, 2 ou 3)."
     elif msg == "2" or "cancelar pedido" in msg:
         return "Por favor, informe o número do pedido que deseja cancelar."
     elif msg == "3" or "falar com atendente" in msg:
@@ -147,20 +148,15 @@ def buscar_resposta(mensagem):
     if melhor_score >= 60 and melhor_intencao:
         return respostas[melhor_intencao]["resposta"]
     else:
-        return f"""{saudacao}, em que posso ajudar?
-
-1. Verificar pedido
-
-2. Cancelar pedido
-
-3. Falar com atendente
-
-4. Alterar endereço de entrega
-
-5. Solicitar reembolso
-
-6. Horário de funcionamento
-"""
+        return (
+            f"{saudacao}, em que posso ajudar?\n\n"
+            "1. Verificar pedido\n"
+            "2. Cancelar pedido\n"
+            "3. Falar com atendente\n"
+            "4. Alterar endereço de entrega\n"
+            "5. Solicitar reembolso\n"
+            "6. Horário de funcionamento"
+        )
 
 if __name__ == "__main__":
     app.run(debug=False)
