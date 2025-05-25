@@ -10,7 +10,9 @@ from flask import Flask, render_template, request, jsonify
 from datetime import datetime
 
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
+nltk.download('rslp')
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
