@@ -199,6 +199,47 @@ session_start();
       indice = (indice + 1) % slides.length;
       mostrarSlide(indice);
     });
+
+    
+  </script>
+
+  <!-- Adicione onde quiser exibir o chatbot, por exemplo, no final do body -->
+<button id="toggleChatbot" style="
+  position: fixed;
+  bottom: 40px; /* valor menor para ficar mais embaixo */
+  right: 20px;
+  z-index: 10000;
+  background: #d26070;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+">💬</button>
+<iframe 
+  src="../chatbot/templates/cliente.php" 
+  style="position:fixed; bottom:94px; right:20px; width:350px; height:500px; border:2px solid #d26070; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.15); z-index:9999; background:#fff;"
+  title="Chatbot Atendente"
+  allow="clipboard-write"
+></iframe>
+  <script>
+    const chatbotFrame = document.querySelector('iframe');
+    const toggleButton = document.getElementById('toggleChatbot');
+
+    // Inicialmente esconder o chatbot
+    chatbotFrame.style.display = 'none';
+
+    // Alternar visibilidade do chatbot
+    toggleButton.addEventListener('click', () => {
+      if (chatbotFrame.style.display === 'none') {
+        chatbotFrame.style.display = 'block';
+      } else {
+        chatbotFrame.style.display = 'none';
+      }
+    });
   </script>
 </body>
 
