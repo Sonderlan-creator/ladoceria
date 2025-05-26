@@ -23,11 +23,15 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, var(--color-tertiary) 60%, var(--color-quaternary) 100%);
+      background: url('../imgs/fundo_tela_login') no-repeat center center fixed;
+      background-size: cover;
       color: var(--color-primary);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+    }
+    .logo-text{
+      font-family: "MonteCarlo", cursive;
     }
     .nav-bar {
       width: 100%;
@@ -85,7 +89,7 @@
     .section-content {
       width: 100%;
       max-width: 420px;
-      background: rgba(255,255,255,0.97);
+      background: rgba(255, 255, 255, 0.9); /* Opacidade ajustada */
       border-radius: var(--border-radius-m);
       box-shadow: var(--shadow);
       padding: 2.5rem 2rem;
