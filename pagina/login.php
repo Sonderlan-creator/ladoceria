@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      ba
+
     }
     .logo-text{
       font-family: "MonteCarlo", cursive;
