@@ -1,3 +1,33 @@
+<?php
+include_once '../Db/conexao.php';
+
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+
+    $stmt = $conn->prepare("SELECT id, nome FROM usuarios WHERE email = ? AND senha = ?");
+    $stmt->bind_param("ss", $email, $senha);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($id, $nome);
+        $stmt->fetch();
+        $_SESSION['usuario_id'] = $id;
+        $_SESSION['usuario_nome'] = $nome;
+        echo "<script>alert('Login realizado com sucesso!');window.location.href='index.php';</script>";
+        exit;
+    } else {
+        echo "<script>alert('E-mail ou senha incorretos!');window.history.back();</script>";
+        exit;
+    }
+    $stmt->close();
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

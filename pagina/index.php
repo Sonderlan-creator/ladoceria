@@ -1,4 +1,7 @@
-<?php include '../Db/conexao.php'; ?>
+<?php
+include '../Db/conexao.php';
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,12 +44,21 @@
       <li class="nav-item">
       <a href="#contato" class="nav-link">Contato</a>
       </li>
-      <li class="nav-item">
-        <a href="registro.php" class="nav-link">Registro</a>
-      </li>
-      <li class="nav-item">
-        <a href="login.php" class="nav-link">Login</a>
-      </li>
+      <?php if (isset($_SESSION['usuario_nome'])): ?>
+          <li class="nav-item">
+            <span class="nav-link" style="font-weight:bold;"><?php echo htmlspecialchars($_SESSION['usuario_nome']); ?></span>
+          </li>
+          <li class="nav-item">
+            <a href="logout.php" class="nav-link">Sair</a>
+          </li>
+        <?php else: ?>
+          <li class="nav-item">
+            <a href="registro.php" class="nav-link">Registro</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.php" class="nav-link">Login</a>
+          </li>
+        <?php endif; ?>
     </ul>
     </nav>
   </header>
@@ -127,22 +139,23 @@
 
   <section id="pedido">
     <h2>Fazer Pedido</h2>
-    <form id="pedidoForm">
-      <input type="text" id="nome" placeholder="Seu nome" required>
-      <select id="produto">
+    <form id="pedidoForm" action="../Db/salvar_pedido.php" method="POST">
+      <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+      <select name="tipo" id="produto">
         <option value="Bolo de Pote">Bolo de Pote</option>
         <option value="Brigadeiro">Brigadeiro</option>
         <option value="Coxinha Doce">Coxinha Doce</option>
       </select>
-      <input type="number" id="quantidade" placeholder="Quantidade" required>
-      <textarea id="obs" placeholder="Observações"></textarea>
+      <input type="number" name="qtd" id="quantidade" placeholder="Quantidade" required>
+      <textarea name="obs" id="obs" placeholder="Observações"></textarea>
+      <textarea name="end" id="end" placeholder="Endereço de entrega" required></textarea>
       <button type="submit">Confirmar Pedido</button>
     </form>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>WhatsApp: <a href="https://wa.me/5599999999999" target="_blank">(75) 99177-9729</a></p>
+    <p>WhatsApp: <a href="https://wa.me/5573988592733" target="_blank">(75) 99177-9729</a></p>
     <p>Instagram: @lla.doceriaa</p>
     <p>Endereço: Rua principal, Capoeiruçu, Cachoeira, Bahia, Brazil 44300000</p>
   </section>
@@ -159,8 +172,9 @@
       const produto = document.getElementById('produto').value;
       const qtd = document.getElementById('quantidade').value;
       const obs = document.getElementById('obs').value;
-      const msg = `Olá! Gostaria de fazer um pedido:\n- ${produto} x${qtd}\nObservações: ${obs}\nNome: ${nome}`;
-      const zap = `https://wa.me/5575988117699?text=${encodeURIComponent(msg)}`;
+      const end = document.getElementById('end').value;
+      const msg = `Olá! Gostaria de fazer um pedido:\n- ${produto} x${qtd}\nObservações: ${obs}\nNome: ${nome}\nEndereço: ${end}`;
+      const zap = `https://wa.me/5573988592733?text=${encodeURIComponent(msg)}`;
       window.open(zap, '_blank');
     });
 

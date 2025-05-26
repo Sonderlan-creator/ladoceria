@@ -1,4 +1,26 @@
+<?php
+include_once '../Db/conexao.php';
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $telefone = $_POST['telefone'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+
+    // Salva a senha em texto puro (NÃO recomendado para produção)
+    $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, telefone, senha) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $nome, $email, $telefone, $senha);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Usuário registrado com sucesso!');window.location.href='login.php';</script>";
+        exit;
+    } else {
+        echo "<script>alert('Erro ao registrar usuário.');window.history.back();</script>";
+    }
+    $stmt->close();
+    $conn->close();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -223,7 +245,7 @@
 <body>
   <header>
     <nav class="nav-bar">
-      <a href="index.html" class="nav-logo">
+      <a href="index.php" class="nav-logo">
         <h2 class="logo-text">La doceria</h2>
       </a>
     </nav>

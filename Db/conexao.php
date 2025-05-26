@@ -1,9 +1,14 @@
 <?php
 
-$servername = "auth-db1660.hstgr.io";
-$username = "u182528050_ladoceria";
-$password = '@sSNwx4s$W&AW?A6';
-$dbname = "u182528050_ladoceria";
+// $servername = "auth-db1660.hstgr.io";
+// $username = "u182528050_ladoceria";
+// $password = '@sSNwx4s$W&AW?A6';
+// $dbname = "u182528050_ladoceria";
+
+$servername = "localhost";
+$username = "root";
+$password = '';
+$dbname = "ladoce";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
