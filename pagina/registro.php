@@ -47,7 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, var(--color-tertiary) 60%, var(--color-quaternary) 100%);
+      background: 
+      linear-gradient(rgba(255, 255, 255, 0.8),rgba(0, 0, 0, 0.8)), url('../imgs/fundo_tela_login.png') no-repeat center center fixed;
+      background-size: cover;
       color: var(--color-primary);
       min-height: 100vh;
       display: flex;
@@ -71,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       align-items: center;
     }
     .logo-text {
-      font-family: var(--font-family-title);
+      font-family: "MonteCarlo", cursive;
       font-size: 2.5rem;
       font-weight: 700;
       color: var(--color-primary);
@@ -109,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     .section-content {
       width: 100%;
       max-width: 420px;
-      background: rgba(255,255,255,0.97);
+      background: rgba(255, 255, 255, 0.8); /* Igual ao login */
       border-radius: var(--border-radius-m);
       box-shadow: var(--shadow);
       padding: 2.5rem 2rem;
