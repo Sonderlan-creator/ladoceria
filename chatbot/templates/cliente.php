@@ -37,7 +37,7 @@
             border-radius: var(--border-radius-s);
             border: 1px solid #e3e8ee;
             background: var(--color-quaternary);
-            padding: 60px 12px;
+            padding: 100px 12px;
             height: 280px;
             overflow-y: auto;
             margin: 0 18px 18px 18px;
@@ -79,7 +79,7 @@
         .input-row {
             display: flex;
             gap: 10px;
-            margin: 0 18px 18px 18px;
+            /* margin: 0 18px 18px 18px; */
         }
         #mensagem {
             flex: 1;
