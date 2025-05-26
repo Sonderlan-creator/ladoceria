@@ -27,7 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Miniver&family=MonteCarlo&family=Playwrite+RO:wght@100..400&display=swap" rel="stylesheet">
   <title>Registro | LA DOCERIA</title>
+
   <style>
     :root {
       --color-primary: #5c3d2e;
@@ -54,6 +56,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+
+    }
+    .logo-text{
+      font-family: "MonteCarlo", cursive;
     }
     .nav-bar {
       width: 100%;
@@ -73,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       align-items: center;
     }
     .logo-text {
-      font-family: "MonteCarlo", cursive;
+      /* font-family: var(--font-family-title); */
       font-size: 2.5rem;
       font-weight: 700;
       color: var(--color-primary);
@@ -111,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     .section-content {
       width: 100%;
       max-width: 420px;
-      background: rgba(255, 255, 255, 0.8); /* Igual ao login */
+      background: rgba(255, 255, 255, 0.8); /* Opacidade ajustada */
       border-radius: var(--border-radius-m);
       box-shadow: var(--shadow);
       padding: 2.5rem 2rem;
