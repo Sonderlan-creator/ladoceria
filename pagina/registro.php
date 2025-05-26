@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -237,7 +239,7 @@
                 <input type="text" name="nome" placeholder="Nome completo" required>
                 <input type="email" name="email" placeholder="E-mail" required>
                 <input type="tel" name="telefone" placeholder="Telefone" pattern="[0-9]{10,15}" required>
-                <input type="text" name="endereco" placeholder="Endereço" required>
+                <!-- <input type="text" name="endereco" placeholder="Endereço" required> -->
                 <input type="password" name="senha" placeholder="Senha" required>
                 <button type="submit" class="button complete-order">Registrar</button>
               </form>

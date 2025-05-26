@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Miniver&family=MonteCarlo&family=Playwrite+RO:wght@100..400&display=swap" rel="stylesheet">
   <title>Login | LA DOCERIA</title>
+  
   <style>
     :root {
       --color-primary: #5c3d2e;
@@ -23,12 +25,14 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: url('../imgs/fundo_tela_login') no-repeat center center fixed;
+      background: 
+      linear-gradient(rgba(255, 255, 255, 0.8),rgba(0, 0, 0, 0.8)), url('../imgs/fundo_tela_login.png') no-repeat center center fixed;
       background-size: cover;
       color: var(--color-primary);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      ba
     }
     .logo-text{
       font-family: "MonteCarlo", cursive;
@@ -51,7 +55,7 @@
       align-items: center;
     }
     .logo-text {
-      font-family: var(--font-family-title);
+      /* font-family: var(--font-family-title); */
       font-size: 2.5rem;
       font-weight: 700;
       color: var(--color-primary);
@@ -89,7 +93,7 @@
     .section-content {
       width: 100%;
       max-width: 420px;
-      background: rgba(255, 255, 255, 0.9); /* Opacidade ajustada */
+      background: rgba(255, 255, 255, 0.8); /* Opacidade ajustada */
       border-radius: var(--border-radius-m);
       box-shadow: var(--shadow);
       padding: 2.5rem 2rem;
@@ -225,7 +229,7 @@
 <body>
   <header>
     <nav class="nav-bar">
-      <a href="index.html" class="nav-logo">
+      <a href="index.php" class="nav-logo">
         <h2 class="logo-text">La doceria</h2>
       </a>
     </nav>
