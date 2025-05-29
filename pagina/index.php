@@ -203,10 +203,10 @@ session_start();
     
   </script>
 
-  <!-- Adicione onde quiser exibir o chatbot, por exemplo, no final do body -->
+  <!-- Botão para abrir/fechar o chatbot -->
 <button id="toggleChatbot" style="
   position: fixed;
-  bottom: 40px; /* valor menor para ficar mais embaixo */
+  bottom: 40px;
   right: 20px;
   z-index: 10000;
   background: #d26070;
@@ -219,28 +219,23 @@ session_start();
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   cursor: pointer;
 ">💬</button>
+
+<!-- Iframe do chatbot Flask -->
 <iframe 
-  src="../chatbot/templates/cliente.php" 
-  style="position:fixed; bottom:94px; right:20px; width:350px; height:500px; border:2px solid #d26070; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.15); z-index:9999; background:#fff;"
-  title="Chatbot Atendente"
+  id="chatbotFrame"
+  src="http://127.0.0.1:5000/"
+  style="position:fixed; bottom:94px; right:20px; width:350px; height:500px; border:2px solid #d26070; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.15); z-index:9999; background:#fff; display:none;"
+  title="Chatbot"
   allow="clipboard-write"
 ></iframe>
-  <script>
-    const chatbotFrame = document.querySelector('iframe');
-    const toggleButton = document.getElementById('toggleChatbot');
 
-    // Inicialmente esconder o chatbot
-    chatbotFrame.style.display = 'none';
-
-    // Alternar visibilidade do chatbot
-    toggleButton.addEventListener('click', () => {
-      if (chatbotFrame.style.display === 'none') {
-        chatbotFrame.style.display = 'block';
-      } else {
-        chatbotFrame.style.display = 'none';
-      }
-    });
-  </script>
+<script>
+  const chatbotFrame = document.getElementById('chatbotFrame');
+  const toggleButton = document.getElementById('toggleChatbot');
+  toggleButton.addEventListener('click', () => {
+    chatbotFrame.style.display = chatbotFrame.style.display === 'none' ? 'block' : 'none';
+  });
+</script>
 </body>
 
 </html>

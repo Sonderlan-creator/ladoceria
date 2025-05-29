@@ -21,7 +21,7 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import RSLPStemmer
 
 stop_words = set(stopwords.words("portuguese")) 
-stemmer = RSLPStemmer()  # Melhor para português
+stemmer = RSLPStemmer()
 
 def preprocessar(texto):
     tokens = word_tokenize(texto.lower())
@@ -178,7 +178,7 @@ def gerar_resposta_chatbot(msg):
         return consultar_cardapio()
 
     elif "fidelidade" in msg or "pontos" in msg:
-        return consultar_fidelidade("cliente_exemplo")  # Troque pelo identificador real do cliente
+        return consultar_fidelidade("cliente_exemplo")  #Lembrete: Trocar pelo identificador real do cliente
 
     elif msg == "3" or "falar com atendente" in msg:
         global modo_atendente
@@ -206,9 +206,9 @@ def gerar_resposta_chatbot(msg):
 
 def get_db_connection():
     return mysql.connector.connect(
-        host="ftp://gtifadba.com.br/",
-        user="u132528050_ladoceria",
-        password="@sSNwx4s$W&AW?A6",
+        host="localhost",
+        user="root",
+        password="",
         database="u132528050_ladoceria"
     )
 

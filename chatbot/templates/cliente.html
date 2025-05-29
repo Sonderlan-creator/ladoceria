@@ -15,45 +15,28 @@
             --border-radius-l: 12px;
         }
 
-        body {
+        html, body {
+            width: 100%;
+            height: 100%;
             margin: 0;
+            padding: 0;
+            background: transparent;
+        }
+
+        body {
             font-family: var(--font-family);
             background-color: var(--color-tertiary);
         }
 
-        #botao-chat {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--color-accent);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 28px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: background 0.2s;
-        }
-        #botao-chat:hover {
-            background: var(--color-primary);
-        }
-
-        #janela-chat {
-            position: fixed;
-            bottom: 90px;
-            right: 20px;
-            width: 340px;
-            height: 460px;
-            background: var(--color-quaternary);
-            border-radius: var(--border-radius-l);
-            display: none;
+        #chatbox-container {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
             flex-direction: column;
+            border-radius: var(--border-radius-l);
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
             overflow: hidden;
-            z-index: 1000;
         }
 
         #chat-mensagens {
@@ -158,11 +141,8 @@
         }
     </style>
 </head>
-<body>
-
-<button id="botao-chat">💬</button>
-
-<div id="janela-chat">
+<body style="margin:0; padding:0;">
+<div id="chatbox-container" style="width:100%;height:100%;">
     <div id="chat-mensagens"></div>
     <div id="digitando">Atendente está digitando...</div>
     <form id="chat-form">
@@ -170,20 +150,17 @@
         <button type="submit" id="enviar">⮞</button>
     </form>
 </div>
-
 <script>
-    const botaoChat = document.getElementById('botao-chat');
-    const janelaChat = document.getElementById('janela-chat');
     const form = document.getElementById('chat-form');
     const input = document.getElementById('mensagem');
     const mensagensDiv = document.getElementById('chat-mensagens');
     const digitandoDiv = document.getElementById('digitando');
 
-    let mensagensAntigas = [];
-
-    botaoChat.addEventListener('click', () => {
-        janelaChat.style.display = janelaChat.style.display === 'none' ? 'flex' : 'none';
-    });
+    let clienteId = localStorage.getItem('clienteId');
+    if (!clienteId) {
+        clienteId = crypto.randomUUID();
+        localStorage.setItem('clienteId', clienteId);
+    }
 
     async function carregarMensagens() {
         const resp = await fetch('/mensagens?cliente_id=' + clienteId);
@@ -219,13 +196,6 @@
 
     setInterval(carregarMensagens, 1000);
     carregarMensagens();
-
-    let clienteId = localStorage.getItem('clienteId');
-    if (!clienteId) {
-        clienteId = crypto.randomUUID();
-        localStorage.setItem('clienteId', clienteId);
-    }
 </script>
-
 </body>
 </html>
