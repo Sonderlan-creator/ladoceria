@@ -261,16 +261,28 @@ session_start();
   });
 
   function fecharPerfil() {
-    document.getElementById('modalPerfil').style.display = 'none';
-    // Remove o iframe para evitar erro após exclusão
-    const iframe = document.querySelector('#modalPerfil iframe');
-    if (iframe) iframe.remove();
-  }
+  document.getElementById('modalPerfil').style.display = 'none';
+  const iframe = document.querySelector('#modalPerfil iframe');
+  if (iframe) iframe.remove();
+  window.location.reload();
+}
 
   window.addEventListener('message', function(event) {
     if (event.data === 'usuarioExcluido') {
-      fecharPerfil();
-      setTimeout(() => window.location.reload(), 300);
+      // Mostra fundo branco e X antes de recarregar
+      const modal = document.getElementById('modalPerfil');
+      const conteudo = modal.querySelector('.modal-conteudo');
+      // Remove o iframe
+      const iframe = conteudo.querySelector('iframe');
+      if (iframe) iframe.remove();
+      // Limpa o conteúdo e deixa só o botão X
+      conteudo.innerHTML = '<button onclick="fecharPerfil()" class="modal-fechar">&times;</button>';
+      conteudo.style.background = '#fff'; // Fundo branco
+      modal.style.display = 'flex';
+      // Aguarda 800ms e recarrega a página principal
+      setTimeout(() => {
+        window.location.reload();
+      }, 800);
     }
   });
 </script>
