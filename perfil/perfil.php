@@ -1,5 +1,5 @@
 <?php
-session_start(); // Adicione esta linha!
+session_start();
 include '../Db/conexao.php';
 
 $id = $_SESSION['usuario_id']; 
@@ -20,7 +20,13 @@ $user = $result->fetch_assoc();
   <div class="container mt-5">
     <div class="card shadow-lg p-4">
       <div class="d-flex align-items-center mb-4">
-        <img src="../imgs/frenteladoceria.jpg" class="rounded-circle me-3" width="80" height="80" alt="avatar">
+        <?php
+        if ($user['foto']) {
+          echo '<img id="avatarImg" src="../uploads/' . $user['foto'] . '" class="rounded-circle me-3" width="80" height="80" alt="avatar" style="cursor:pointer;">';
+        } else {
+          echo '<img id="avatarImg" src="../imgs/frenteladoceria.jpg" class="rounded-circle me-3" width="80" height="80" alt="avatar" style="cursor:pointer;">';
+        }
+        ?>
         <div>
           <h2 class="mb-0">Olá, <?= $user['nome'] ?>!</h2>
           <p class="text-muted">Seja bem-vindo(a) ao seu espaço de cliente 🍰</p>
@@ -68,7 +74,7 @@ $user = $result->fetch_assoc();
         <!-- Form de edição -->
         <div class="col-md-6">
           <h4>Editar informações</h4>
-          <form id="perfilForm">
+          <form id="perfilForm" enctype="multipart/form-data" method="POST" action="atualizar_perfil.php">
             <input type="hidden" name="id" value="<?= $user['id'] ?>">
 
             <div class="mb-3">
@@ -124,5 +130,32 @@ $user = $result->fetch_assoc();
   </div>
 
   <script src="perfil.js"></script>
+  <script>
+    document.getElementById('avatarImg').onclick = function() {
+      document.getElementById('fotoInput').click();
+    };
+    document.getElementById('fotoInput').onchange = function() {
+      document.getElementById('perfilForm').submit();
+    };
+
+    // Excluir conta com AJAX e redirecionar para index.php
+    document.getElementById('deletarConta').onclick = function() {
+      if (confirm('Tem certeza que deseja excluir sua conta?')) {
+        fetch('deletar_usuario.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'id=<?= $user['id'] ?>'
+        })
+        .then(response => response.text())
+        .then(data => {
+          if (data.includes('sucesso')) {
+            window.location.href = '../pagina/index.php'; // Redireciona para index.php
+          } else {
+            alert('Erro ao excluir usuário.');
+          }
+        });
+      }
+    };
+  </script>
 </body>
 </html>

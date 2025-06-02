@@ -6,10 +6,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $telefone = $_POST['telefone'] ?? '';
     $senha = $_POST['senha'] ?? '';
+    $foto = null;
 
-    // Salva a senha em texto puro (NÃO recomendado para produção)
-    $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, telefone, senha) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $nome, $email, $telefone, $senha);
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
+        $permitidos = ['jpg', 'jpeg', 'png', 'jfif', 'webp'];
+        $ext = strtolower(pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION));
+        if (!in_array($ext, $permitidos)) {
+            die('Tipo de imagem não permitido!');
+        }
+        if ($_FILES['foto']['size'] > 2 * 1024 * 1024) {
+            die('Imagem muito grande! Máximo 2MB.');
+        }
+        $novo_nome = uniqid() . '.' . $ext;
+        move_uploaded_file($_FILES['foto']['tmp_name'], '../uploads/' . $novo_nome);
+        $foto = $novo_nome;
+    }
+
+    $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, telefone, senha, foto) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $nome, $email, $telefone, $senha, $foto);
 
     if ($stmt->execute()) {
         echo "<script>alert('Usuário registrado com sucesso!');window.location.href='login.php';</script>";
@@ -265,12 +279,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <div class="hero-details">
             <h2 class="title">Crie sua conta</h2>
             <div class="form-bg">
-              <form class="formulario" method="post" action="registro.php">
+              <form class="formulario" method="post" action="registro.php" enctype="multipart/form-data">
                 <input type="text" name="nome" placeholder="Nome completo" required>
                 <input type="email" name="email" placeholder="E-mail" required>
                 <input type="tel" name="telefone" placeholder="Telefone" pattern="[0-9]{10,15}" required>
-                <!-- <input type="text" name="endereco" placeholder="Endereço" required> -->
                 <input type="password" name="senha" placeholder="Senha" required>
+                <label>Foto de Perfil</label>
+                <input type="file" name="foto" accept="image/*">
                 <button type="submit" class="button complete-order">Registrar</button>
               </form>
             </div>
