@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['usuario_id'])) {
+  echo "<script>window.parent.postMessage('usuarioExcluido', '*');</script>";
+  exit;
+}
 include '../Db/conexao.php';
 
 $id = $_SESSION['usuario_id']; 
@@ -138,7 +142,6 @@ $user = $result->fetch_assoc();
       document.getElementById('perfilForm').submit();
     };
 
-    // Excluir conta com AJAX e redirecionar para index.php
     document.getElementById('deletarConta').onclick = function() {
       if (confirm('Tem certeza que deseja excluir sua conta?')) {
         fetch('deletar_usuario.php', {
@@ -149,7 +152,8 @@ $user = $result->fetch_assoc();
         .then(response => response.text())
         .then(data => {
           if (data.includes('sucesso')) {
-            window.location.href = '../pagina/index.php'; // Redireciona para index.php
+            // Fecha o modal imediatamente
+            window.parent.postMessage('usuarioExcluido', '*');
           } else {
             alert('Erro ao excluir usuário.');
           }

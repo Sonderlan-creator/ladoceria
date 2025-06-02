@@ -238,21 +238,41 @@ session_start();
 </script>
 
 <!-- Modal do Perfil -->
-<div id="modalPerfil">
+<div id="modalPerfil" style="display:none;">
   <div class="modal-conteudo">
     <button onclick="fecharPerfil()" class="modal-fechar">&times;</button>
-    <iframe src="../perfil/perfil.php"></iframe>
+    <!-- O iframe será inserido via JS -->
   </div>
 </div>
 
 <script>
   document.getElementById('abrirPerfil')?.addEventListener('click', function(e) {
     e.preventDefault();
-    document.getElementById('modalPerfil').style.display = 'flex';
+    const modal = document.getElementById('modalPerfil');
+    const conteudo = modal.querySelector('.modal-conteudo');
+    // Remove iframe antigo se existir
+    const oldIframe = conteudo.querySelector('iframe');
+    if (oldIframe) oldIframe.remove();
+    // Cria novo iframe
+    const iframe = document.createElement('iframe');
+    iframe.src = '../perfil/perfil.php';
+    conteudo.appendChild(iframe);
+    modal.style.display = 'flex';
   });
+
   function fecharPerfil() {
     document.getElementById('modalPerfil').style.display = 'none';
+    // Remove o iframe para evitar erro após exclusão
+    const iframe = document.querySelector('#modalPerfil iframe');
+    if (iframe) iframe.remove();
   }
+
+  window.addEventListener('message', function(event) {
+    if (event.data === 'usuarioExcluido') {
+      fecharPerfil();
+      setTimeout(() => window.location.reload(), 300);
+    }
+  });
 </script>
 </body>
 
