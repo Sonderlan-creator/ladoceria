@@ -1,6 +1,6 @@
 <?php
-session_start();
-include 'conexao.php';
+session_start(); // Adicione esta linha!
+include '../Db/conexao.php';
 
 $id = $_SESSION['usuario_id']; 
 $sql = "SELECT * FROM usuarios WHERE id = $id";

@@ -45,20 +45,20 @@ session_start();
       <a href="#contato" class="nav-link">Contato</a>
       </li>
       <?php if (isset($_SESSION['usuario_nome'])): ?>
-          <li class="nav-item">
-            <span class="nav-link" style="font-weight:bold;"><?php echo htmlspecialchars($_SESSION['usuario_nome']); ?></span>
-          </li>
-          <li class="nav-item">
-            <a href="logout.php" class="nav-link">Sair</a>
-          </li>
-        <?php else: ?>
-          <li class="nav-item">
-            <a href="registro.php" class="nav-link">Registro</a>
-          </li>
-          <li class="nav-item">
-            <a href="login.php" class="nav-link">Login</a>
-          </li>
-        <?php endif; ?>
+    <li class="nav-item">
+      <span class="nav-link" id="abrirPerfil" style="font-weight:bold; cursor:pointer;"><?php echo htmlspecialchars($_SESSION['usuario_nome']); ?></span>
+    </li>
+    <li class="nav-item">
+      <a href="logout.php" class="nav-link">Sair</a>
+    </li>
+<?php else: ?>
+    <li class="nav-item">
+      <a href="registro.php" class="nav-link">Registro</a>
+    </li>
+    <li class="nav-item">
+      <a href="login.php" class="nav-link">Login</a>
+    </li>
+<?php endif; ?>
     </ul>
     </nav>
   </header>
@@ -235,6 +235,24 @@ session_start();
   toggleButton.addEventListener('click', () => {
     chatbotFrame.style.display = chatbotFrame.style.display === 'none' ? 'block' : 'none';
   });
+</script>
+
+<!-- Modal do Perfil -->
+<div id="modalPerfil">
+  <div class="modal-conteudo">
+    <button onclick="fecharPerfil()" class="modal-fechar">&times;</button>
+    <iframe src="../perfil/perfil.php"></iframe>
+  </div>
+</div>
+
+<script>
+  document.getElementById('abrirPerfil')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('modalPerfil').style.display = 'flex';
+  });
+  function fecharPerfil() {
+    document.getElementById('modalPerfil').style.display = 'none';
+  }
 </script>
 </body>
 

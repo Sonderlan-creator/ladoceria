@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+include '../Db/conexao.php';
 $id = $_POST['id'];
 
 $sql = "DELETE FROM usuarios WHERE id = ?";

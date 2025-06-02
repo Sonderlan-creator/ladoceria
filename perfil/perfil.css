@@ -1,18 +1,154 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff7f2;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #fff0f5;
+  color: #5c3d2e;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(90, 60, 46, 0.18);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 1050px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 .card-title {
-  color: #d76c6c;
+  color: #d26070;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .card-text {
   font-weight: bold;
-  color: #333;
+  color: #5c3d2e;
+  font-size: 2rem;
 }
 
 .btn-success {
   background-color: #e59595;
   border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+  transition: background 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #d26070;
+}
+
+.btn-outline-danger {
+  border: 2px solid #d26070;
+  color: #d26070;
+  background: transparent;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline-danger:hover {
+  background: #d26070;
+  color: #fff;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+  border: 3px solid #fff0f5;
+  box-shadow: 0 2px 8px rgba(90, 60, 46, 0.08);
+}
+
+h2, h4 {
+  color: #d26070;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 0.5rem;
+}
+
+p, label, input, table, th, td {
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  border-radius: 10px;
+  border: 1px solid #e59595;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  background: #fff0f5;
+  color: #5c3d2e;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  outline: none;
+  border-color: #d26070;
+  background: #fff;
+}
+
+form button[type="submit"] {
+  background: #d26070;
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  border: none;
+  transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background: #e59595;
+}
+
+.table {
+  background: #fff0f5;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.table th, .table td {
+  border: 1px solid #e59595;
+  padding: 0.5rem 1rem;
+  color: #5c3d2e;
+}
+
+.table thead {
+  background: #ffe4e1;
+}
+
+@media (max-width: 900px) {
+  .card {
+    padding: 1rem 0.5rem;
+    min-height: 95vh;
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .container {
+    padding: 0;
+  }
 }

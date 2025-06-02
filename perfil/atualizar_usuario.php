@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+include '../Db/conexao.php';
 
 $id = $_POST['id'];
 $nome = $_POST['nome'];
