@@ -186,9 +186,9 @@ def gerar_resposta_chatbot(msg):
 
 def get_db_connection():
     return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
+        host="auth-db1660.hstgr.io",
+        user="u182528050_ladoceria",
+        password="@sSNwx4s$W&AW?A6",
         database="u132528050_ladoceria"
     )
 
