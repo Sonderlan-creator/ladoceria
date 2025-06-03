@@ -241,7 +241,6 @@ session_start();
 <div id="modalPerfil" style="display:none;">
   <div class="modal-conteudo">
     <button onclick="fecharPerfil()" class="modal-fechar">&times;</button>
-    <!-- O iframe será inserido via JS -->
   </div>
 </div>
 
@@ -250,10 +249,8 @@ session_start();
     e.preventDefault();
     const modal = document.getElementById('modalPerfil');
     const conteudo = modal.querySelector('.modal-conteudo');
-    // Remove iframe antigo se existir
     const oldIframe = conteudo.querySelector('iframe');
     if (oldIframe) oldIframe.remove();
-    // Cria novo iframe
     const iframe = document.createElement('iframe');
     iframe.src = '../perfil/perfil.php';
     conteudo.appendChild(iframe);
@@ -269,20 +266,16 @@ session_start();
 
   window.addEventListener('message', function(event) {
     if (event.data === 'usuarioExcluido') {
-      // Mostra fundo branco e X antes de recarregar
       const modal = document.getElementById('modalPerfil');
       const conteudo = modal.querySelector('.modal-conteudo');
-      // Remove o iframe
       const iframe = conteudo.querySelector('iframe');
       if (iframe) iframe.remove();
-      // Limpa o conteúdo e deixa só o botão X
       conteudo.innerHTML = '<button onclick="fecharPerfil()" class="modal-fechar">&times;</button>';
-      conteudo.style.background = '#fff'; // Fundo branco
+      conteudo.style.background = '#fff';
       modal.style.display = 'flex';
-      // Aguarda 800ms e recarrega a página principal
       setTimeout(() => {
         window.location.reload();
-      }, 800);
+      }, 200);
     }
   });
 </script>

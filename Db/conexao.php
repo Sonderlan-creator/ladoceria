@@ -19,5 +19,4 @@ if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Não exiba mensagem de sucesso em produção
 ?>

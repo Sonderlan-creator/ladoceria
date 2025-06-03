@@ -63,11 +63,9 @@ def buscar_resposta(mensagem):
     confianca = proba[idx_max]
     intencao_predita = modelo.classes_[idx_max]
 
-    # Se o modelo estiver confiante, responde pela intenção
     if confianca > 0.55:
         return respostas[intencao_predita]["resposta"]
 
-    # Caso contrário, usa fuzzy para tentar encontrar algo próximo
     melhor_score = 0
     melhor_intencao = None
     for chave, valor in respostas.items():
@@ -188,21 +186,6 @@ def gerar_resposta_chatbot(msg):
     resposta_ia = buscar_resposta(msg)
     if resposta_ia != "Desculpe, não entendi sua pergunta.":
         return resposta_ia
-
-    return f"""{saudacao}, em que posso ajudar?
-
-1. Verificar pedido
-
-2. Cancelar pedido
-
-3. Falar com atendente
-
-4. Alterar endereço de entrega
-
-5. Solicitar reembolso
-
-6. Horário de funcionamento
-"""
 
 def get_db_connection():
     return mysql.connector.connect(

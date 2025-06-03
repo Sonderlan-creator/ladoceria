@@ -93,6 +93,7 @@ $user = $result->fetch_assoc();
               <label>Nova Senha</label>
               <input type="password" class="form-control" name="senha" placeholder="Deixe em branco para manter">
             </div>
+            <input type="file" id="fotoInput" name="foto" accept="image/*" style="display:none;">
             <button type="submit" class="btn btn-success">Salvar Alterações</button>
           </form>
           <div id="mensagem" class="mt-2 text-success"></div>
