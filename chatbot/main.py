@@ -172,9 +172,6 @@ def gerar_resposta_chatbot(msg):
             return consultar_status_pedido(numero)
         return "Por favor, informe o número do pedido."
 
-    elif "cardápio" in msg or "cardapio" in msg:
-        return consultar_cardapio()
-
     elif "fidelidade" in msg or "pontos" in msg:
         return consultar_fidelidade("cliente_exemplo")  #Lembrete: Trocar pelo identificador real do cliente
 
