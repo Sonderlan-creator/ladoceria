@@ -1,6 +1,8 @@
 import nltk
 import json
 import os
+import mysql.connector
+import threading
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
@@ -8,8 +10,6 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 from flask import Flask, render_template, request, jsonify
 from datetime import datetime
-import mysql.connector
-import threading
 
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -268,4 +268,4 @@ if __name__ == '__main__':
     else:
         iniciar_chatbot()
 
-janelaChat.style.display = 'flex';
+ janelaChat.style.display = 'flex';
