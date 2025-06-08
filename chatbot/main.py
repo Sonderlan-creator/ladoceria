@@ -168,7 +168,7 @@ def gerar_resposta_chatbot(msg):
     elif "fidelidade" in msg or "pontos" in msg:
         return consultar_fidelidade("cliente_exemplo")  #Lembrete: Trocar pelo identificador real do cliente
 
-    elif msg == "3" or "falar com atendente" in msg:
+    elif "Quero falar com atendente" in msg or "falar com atendente" in msg:
         global modo_atendente
         modo_atendente = True
         return "Chamando o atendente. Aguarde um momento, por favor."
