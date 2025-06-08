@@ -177,6 +177,8 @@ def gerar_resposta_chatbot(msg):
     if resposta_ia != "Desculpe, não entendi sua pergunta.":
         return resposta_ia
 
+    return "Desculpe, não entendi sua pergunta."
+
 def get_db_connection():
     return mysql.connector.connect(
         host="srv1660.hstgr.io",
