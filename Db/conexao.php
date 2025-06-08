@@ -1,6 +1,6 @@
 <?php
 // Configuração para servidor remoto (descomente para usar em produção)
-$servername = "auth-db1660.hstgr.io";
+$servername = "srv1660.hstgr.io";
 $username = "u182528050_ladoceria";
 $password = '@sSNwx4s$W&AW?A6';
 $dbname = "u182528050_ladoceria";
