@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 from datetime import datetime
 
 nltk.download('punkt')
@@ -19,6 +20,10 @@ nltk.download('punkt_tab')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import RSLPStemmer
+
+app = Flask(__name__)
+app.secret_key = 'sua_chave_secreta_aqui'
+CORS(app)
 
 stop_words = set(stopwords.words("portuguese")) 
 stemmer = RSLPStemmer()
@@ -81,18 +86,6 @@ def buscar_resposta(mensagem):
 
     return "Desculpe, não entendi sua pergunta."
 
-def iniciar_chatbot():
-    print("Bem-vindo(a) ao chatbot! Como posso te ajudar?")
-    while True:
-        mensagem = input("> ")
-        if mensagem.lower() in ["sair", "tchau", "adeus"]:
-            print("Obrigado por conversar comigo! Até logo!")
-            break
-        resposta = buscar_resposta(mensagem)
-        print(resposta)
-
-app = Flask(__name__)
-
 mensagens = []
 modo_atendente = False
 
@@ -101,11 +94,11 @@ modo_atendente = False
 
 @app.route('/')
 def cliente():
-    return render_template('cliente.html')
+    return render_template('cliente.php')
 
 @app.route('/atendente')
 def atendente():
-    return render_template('atendente.html')
+    return render_template('atendente.php')
 
 @app.route('/mensagens')
 def listar_mensagens():
@@ -186,7 +179,7 @@ def gerar_resposta_chatbot(msg):
 
 def get_db_connection():
     return mysql.connector.connect(
-        host="auth-db1660.hstgr.io",
+        host="srv1660.hstgr.io",
         user="u182528050_ladoceria",
         password="@sSNwx4s$W&AW?A6",
         database="u132528050_ladoceria"
@@ -237,7 +230,7 @@ chats_aguardando_atendente = set()
 
 @app.route('/painel')
 def painel():
-    return render_template('painel_atendente.html')
+    return render_template('painel_atendente.php')
 
 @app.route('/painel_atendente')
 def painel_atendente():
@@ -262,10 +255,6 @@ def finalizar_atendimento():
     return '', 204
 
 if __name__ == '__main__':
-    import sys
-    if len(sys.argv) > 1 and sys.argv[1] == "web":
-        app.run(debug=False)
-    else:
-        iniciar_chatbot()
+    app.run(host='0.0.0.0', port=81)
 
- janelaChat.style.display = 'flex';
+# janelaChat.style.display = 'flex';

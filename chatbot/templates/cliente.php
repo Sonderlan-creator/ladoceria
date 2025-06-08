@@ -151,51 +151,57 @@
     </form>
 </div>
 <script>
+    // Gere um cliente_id único e salve no localStorage
+    let cliente_id = localStorage.getItem('cliente_id');
+    if (!cliente_id) {
+        cliente_id = 'cli_' + Math.random().toString(36).substr(2, 16);
+        localStorage.setItem('cliente_id', cliente_id);
+    }
+
+    const API_URL = 'https://1846146f-9016-4618-8024-67702882e445-00-3f4mdtxk897zl.janeway.replit.dev';
+
     const form = document.getElementById('chat-form');
     const input = document.getElementById('mensagem');
     const mensagensDiv = document.getElementById('chat-mensagens');
     const digitandoDiv = document.getElementById('digitando');
 
-    let clienteId = localStorage.getItem('clienteId');
-    if (!clienteId) {
-        clienteId = crypto.randomUUID();
-        localStorage.setItem('clienteId', clienteId);
-    }
-
-    async function carregarMensagens() {
-        const resp = await fetch('/mensagens?cliente_id=' + clienteId);
-        const data = await resp.json();
-        mensagensDiv.innerHTML = "";
-        data.mensagens.forEach(item => {
-            let classe = "";
-            if (item.autor === 'cliente') classe = "mensagem mensagem-cliente";
-            else if (item.autor === 'bot') classe = "mensagem mensagem-bot";
-            else if (item.autor === 'atendente') classe = "mensagem mensagem-atendente";
-            mensagensDiv.innerHTML += `
-                <div class="${classe}">
-                    <span class="autor">${item.autor}</span>
-                    <span>${item.mensagem}</span>
-                </div>
-            `;
+    function renderHistorico(historico) {
+        mensagensDiv.innerHTML = '';
+        historico.forEach(msg => {
+            let classe = '';
+            if (msg.autor === 'cliente') classe = 'mensagem mensagem-cliente';
+            else if (msg.autor === 'bot') classe = 'mensagem mensagem-bot';
+            else classe = 'mensagem mensagem-atendente';
+            let autor = msg.autor === 'cliente' ? 'Você' : (msg.autor === 'bot' ? 'Bot' : 'Atendente');
+            mensagensDiv.innerHTML += `<div class="${classe}"><span class="autor">${autor}</span>${msg.mensagem}</div>`;
         });
         mensagensDiv.scrollTop = mensagensDiv.scrollHeight;
     }
 
-    form.addEventListener('submit', async e => {
+    function carregarHistorico() {
+        fetch(API_URL + '/mensagens?cliente_id=' + encodeURIComponent(cliente_id))
+        .then(r => r.json())
+        .then(data => {
+            if (data.mensagens) renderHistorico(data.mensagens);
+        });
+    }
+    carregarHistorico();
+    setInterval(carregarHistorico, 2000);
+
+    form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const texto = input.value.trim();
-        if (texto === '') return;
-        await fetch('/enviar_cliente', {
+        const mensagem = input.value.trim();
+        if (!mensagem) return;
+        fetch(API_URL + '/enviar_cliente', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ mensagem: texto, cliente_id: clienteId })
+            body: JSON.stringify({ mensagem: mensagem, cliente_id: cliente_id })
+        }).then(() => {
+            input.value = '';
+            input.focus();
+            setTimeout(carregarHistorico, 300); // Atualiza logo após enviar
         });
-        input.value = '';
-        await carregarMensagens();
     });
-
-    setInterval(carregarMensagens, 1000);
-    carregarMensagens();
 </script>
 </body>
 </html>

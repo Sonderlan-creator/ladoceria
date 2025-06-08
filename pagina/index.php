@@ -223,7 +223,7 @@ session_start();
 <!-- Iframe do chatbot Flask -->
 <iframe 
   id="chatbotFrame"
-  src="../chatbot/cliente.php"
+  src="../chatbot/templates/cliente.php"
   style="position:fixed; bottom:94px; right:20px; width:350px; height:500px; border:2px solid #d26070; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.15); z-index:9999; background:#fff; display:none;"
   title="Chatbot"
   allow="clipboard-write"
